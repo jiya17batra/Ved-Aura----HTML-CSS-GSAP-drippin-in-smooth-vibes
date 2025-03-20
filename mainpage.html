@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ved Aura - Search Remedies</title>
+  <link rel="stylesheet" href="styleformain.css" />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+    crossorigin="anonymous"
+  />
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar Section -->
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="#home" id="navbar__logo">VED AURA</a>
+      <div class="navbar__toggle" id="mobile-menu">
+        <span class="bar"></span> <span class="bar"></span> <span class="bar"></span>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__item"><a href="#home" class="navbar__links">Home</a></li>
+        <li class="navbar__item"><a href="scan.html" class="navbar__links">Quick Scan</a></li>
+        <li class="navbar__item"><a href="data.html" class="navbar__links">Offerings</a></li>
+        <li class="navbar__item"><a href="about.html" class="navbar__links">About Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero" id="home">
+    <div class="hero__container">
+      <h1 style="color: #ff6a00;">Embrace the Energy of</h1>
+      <h2 style="color: #ee0979;">Panchamahabhutas</h2>
+      <p class="hero__description">Harmonize Life with Nature’s Essence</p>
+      <br>
+      <a href="#elements" class="main__btn">Discover Ved Aura</a>
+    </div>
+  </div>
+
+  
+<style>
+  /* Centering and Animation */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+  }
+
+  .search-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #4CAF50;
+    border-radius: 25px;
+    font-size: 18px;
+    outline: none;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .search-input:focus {
+    box-shadow: 0 0 10px #4CAF50;
+  }
+
+  /* Suggestions Styling */
+  .suggestions {
+    position: absolute;
+    width: 100%;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .suggestions div {
+    padding: 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    transition: background 0.3s ease-in-out;
+  }
+
+  .suggestions div:hover {
+    background: #f1f1f1;
+  }
+
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<script>
+  const searchBar = document.getElementById("searchBar");
+  const suggestions = document.getElementById("suggestions");
+
+  const diseases = ["Cold", "Cough", "Headache", "Fever", "Skin Allergy", "Indigestion", "Joint Pain"];
+
+  searchBar.addEventListener("input", () => {
+    let input = searchBar.value.toLowerCase();
+    suggestions.innerHTML = "";
+    
+    if (input.length === 0) {
+      suggestions.style.display = "none";
+      return;
+    }
+
+    let filtered = diseases.filter(disease => disease.toLowerCase().includes(input));
+    
+    if (filtered.length > 0) {
+      suggestions.style.display = "block";
+      filtered.forEach(disease => {
+        let div = document.createElement("div");
+        div.textContent = disease;
+        div.onclick = () => {
+          searchBar.value = disease;
+          suggestions.style.display = "none";
+          searchDisease(disease);
+        };
+        suggestions.appendChild(div);
+      });
+    } else {
+      suggestions.style.display = "none";
+    }
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!searchBar.contains(e.target) && !suggestions.contains(e.target)) {
+      suggestions.style.display = "none";
+    }
+  });
+
+  function searchDisease(disease) {
+    alert("Searching for: " + disease);
+    // Implement your search function to display remedies
+  }
+</script>
+
+
+  <!-- Contact Section -->
+  <div class="join-container">
+    <div class="background-box back-image"></div>
+    <div class="background-box new-image"></div>
+    <div class="contact-section">
+      <h1 class="main-heading">Get in Touch</h1>
+      <p class="sub-heading">We are here to guide you on your journey.</p>
+      <button class="main__btn" onclick="location.href='join.html'">Join the Aura</button>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer__container">
+    <div class="footer__links">
+      <div class="footer__link--wrapper">
+        <div class="footer__link--items">
+          <h2><a href="about.html" class="navbar__links">About Us</a></h2>        
+          <a href="/sign__up">How it Works</a> 
+          <a href="/">Tales of Our Travels</a>
+          <a href="/">Gallery</a> 
+          <a href="/">Terms of Service</a>
+        </div>
+        <div class="footer__link--items">
+          <h2>Contact Us</h2>
+          <a href="/">Contact</a> 
+          <a href="/">Support</a>
+          <a href="/">Services</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__logo">
+      <a href="/" id="footer__logo">VED AURA</a>
+    </div>
+    <p class="website__rights">© Ved Aura 2025. All rights reserved.</p>
+    <div class="social__icons">
+      <a href="/" class="social__icon--link" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="/" class="social__icon--link"><i class="fab fa-instagram"></i></a>
+      <a href="/" class="social__icon--link"><i class="fab fa-youtube"></i></a>
+      <a href="/" class="social__icon--link"><i class="fab fa-linkedin"></i></a>
+      <a href="/" class="social__icon--link"><i class="fab fa-twitter"></i></a>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

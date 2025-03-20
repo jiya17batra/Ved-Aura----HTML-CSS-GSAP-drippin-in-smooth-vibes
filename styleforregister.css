@@ -1,0 +1,73 @@
+/* General Styling */
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Register Container */
+.register-container {
+    margin-top: 50px;
+}
+
+.register-box {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+/* Input Fields */
+input, select {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    background: #222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Register Button */
+button {
+    background-color: gold;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #b8860b;
+}
+
+/* ID Card Styling */
+.id-card {
+    display: none;
+    background: black;
+    border: 2px solid gold;
+    padding: 20px;
+    margin: 20px auto;
+    width: 300px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.id-card h2 {
+    text-align: center;
+    color: gold;
+}
+
+/* Element Icons */
+.element-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.element-icons img {
+    width: 30px;
+    height: 30px;
+}

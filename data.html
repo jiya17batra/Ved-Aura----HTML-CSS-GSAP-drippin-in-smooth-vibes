@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><i><b>VED AURA</b></i></title>
+    <link rel="stylesheet" href="data.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Search Box -->
+    <div class="search-container">
+        <div class="search-box" id="searchBox">
+            <input type="text" id="searchBar" placeholder="Search...">
+            <button onclick="searchDisease()">
+                <i class="fas fa-search"></i>🔍
+            </button>
+        </div>
+    </div>
+    
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>WELCOME!!</h1>
+        <h2><i>HEALTH ON YOUR FINGERTIPS WITH US...</i></h2>
+        <div id="remedyCards" class="card-container"></div>
+    </div>
+
+    <!-- Decorative Leaves for Animation -->
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleSearch() {
+            document.getElementById("searchBox").classList.toggle("open");
+        }
+
+        function searchDisease() {
+            let query = document.getElementById("searchBar").value;
+            alert("Searching for: " + query);  // Temporary alert (replace with actual function)
+        }
+    </script>
+    <script src="data.js"></script>
+
+</body>
+</html>
+

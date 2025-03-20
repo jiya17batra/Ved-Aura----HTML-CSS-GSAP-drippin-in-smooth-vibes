@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    transition: opacity 1s ease-in;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.top, .bottom {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    transition: transform 1s ease-in;
+}
+
+.top {
+    background: #131313;
+}
+
+.bottom {
+    background:#131313;
+}
+
+
+.button {
+    text-decoration: none; /* Ensures no underline on button itself */
+    color: inherit; 
+    align-self: center;
+    position: absolute;
+    background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+    color: #020102;
+    padding: 15px 30px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    margin: -24px 0;
+    transition: transform 300ms ease 300ms;
+}
+
+
+.up {
+    transform: translateY(-100%);
+}
+
+.left {
+    transform: translateX(-100%);
+}
+
+.down {
+    transform: translateY(100%);
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header Button Effects */
+
+button {
+    text-decoration: none; /* Ensures no underline on button itself */
+    color: inherit; 
+    background: linear-gradient(45deg, #ff6600, #ff0066);
+    color: rgb(9, 8, 8);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+  }
+  
+  .button:hover {
+    background: linear-gradient(45deg, #ff3300, #cc0099);
+    transform: scale(2.05);
+    box-shadow: 0px 4px 10px rgba(255, 102, 0, 0.5);
+  }
+  
+  /* Show/Hide Animation */
+  .hidden-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .showing {
+    display: block;
+    opacity: 1;
+  }
+  
+  /* Panchamahabhutas Gradient Text */
+  .gradient-text {
+    background: linear-gradient(90deg, #ff6600, #ff0066);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+  
+  
