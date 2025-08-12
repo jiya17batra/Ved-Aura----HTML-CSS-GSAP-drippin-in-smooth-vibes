@@ -21,3 +21,7 @@ Ved Aura is a web project inspired by **Panchamahabhutas (Five Elements)**,
 1. Clone the repository:  
    ```bash
    git clone https://github.com/your-username/ved-aura.git
+ <p align="center">
+  <img src="assets/VA.gif" alt="Ved Aura Demo" width="600">
+</p>
+
