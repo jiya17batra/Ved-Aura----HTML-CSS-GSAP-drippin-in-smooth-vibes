@@ -3,6 +3,11 @@
 Ved Aura is a web project inspired by **Panchamahabhutas (Five Elements)**,
  blending Ayurveda, Homeopathy, and Allopathy into a smooth, interactive experience. 
  Built with **HTML, CSS, and GSAP**, it brings nature to life on your screen.  
+ 
+## 🌐 View
+
+🔗 **View the Project Here:**  
+ https://jiya17batra.github.io/Ved-Aura----HTML-CSS-GSAP-drippin-in-smooth-vibes/
 
 ## ⚡ Features  
   
